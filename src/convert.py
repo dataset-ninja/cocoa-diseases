@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 
 # project_name = "Cocoa Diseases"
 # dataset_path = "/home/alex/DATASETS/TODO/Cocoa Diseases/archive/Enfermedades Cacao"
-dataset_path = "./APP_DATA/"
+dataset_path = "./APP_DATA/Enfermedades Cacao"
 bbox_ext = ".txt"
 ds_name = "ds"
 batch_size = 30
