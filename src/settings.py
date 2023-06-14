@@ -20,7 +20,7 @@ RELEASE_YEAR: int = 2020
 HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/serranosebas/enfermedades-cacao-yolov4"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 390238
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/cocoa-diseases"
@@ -29,7 +29,9 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/cocoa-diseases"
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://www.kaggle.com/datasets/serranosebas/enfermedades-cacao-yolov4/download?datasetVersionNumber=2"
+DOWNLOAD_ORIGINAL_URL: Optional[
+    Union[str, dict]
+] = "https://www.kaggle.com/datasets/serranosebas/enfermedades-cacao-yolov4/download?datasetVersionNumber=2"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -47,7 +49,7 @@ TAGS: List[str] = None
 
 
 def check_names():
-    fields_before_upload = [PROJECT_NAME] # PROJECT_NAME_FULL
+    fields_before_upload = [PROJECT_NAME]  # PROJECT_NAME_FULL
     if any([field is None for field in fields_before_upload]):
         raise ValueError("Please fill all fields in settings.py before uploading to instance.")
 
@@ -66,7 +68,7 @@ def get_settings():
     }
     if any([field is None for field in settings.values()]):
         raise ValueError("Please fill all fields in settings.py after uploading to instance.")
-   
+
     settings["project_name_full"] = PROJECT_NAME_FULL
     settings["download_original_url"] = DOWNLOAD_ORIGINAL_URL
     settings["class2color"] = CLASS2COLOR
