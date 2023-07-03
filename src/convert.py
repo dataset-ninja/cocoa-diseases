@@ -1,11 +1,17 @@
 # https://www.kaggle.com/datasets/serranosebas/enfermedades-cacao-yolov4
 
-import os, glob
+import glob
+import os
+
 import numpy as np
 import supervisely as sly
-from supervisely.io.fs import get_file_name_with_ext, get_file_name, dir_exists, file_exists
 from dotenv import load_dotenv
-
+from supervisely.io.fs import (
+    dir_exists,
+    file_exists,
+    get_file_name,
+    get_file_name_with_ext,
+)
 
 # if sly.is_development():
 # load_dotenv("local.env")
@@ -20,7 +26,7 @@ from dotenv import load_dotenv
 # dataset_path = "/home/alex/DATASETS/TODO/Cocoa Diseases/archive/Enfermedades Cacao"
 dataset_path = "./APP_DATA/Enfermedades Cacao"
 bbox_ext = ".txt"
-ds_name = "ds"
+ds_name = "all"
 batch_size = 30
 
 
@@ -31,7 +37,7 @@ def create_ann(image_path):
     img_height = image_np.shape[0]
     img_wight = image_np.shape[1]
 
-    bbox_path = image_path.split(".")[0] + bbox_ext
+    bbox_path = os.path.join(os.path.dirname(image_path), get_file_name(image_path) + bbox_ext)
 
     if file_exists(bbox_path):
         with open(bbox_path) as f:
@@ -59,11 +65,14 @@ obj_class_healthy = sly.ObjClass("healthy", sly.Rectangle)
 
 idx_to_class = {0: obj_class_phytophthora, 1: obj_class_monilia, 2: obj_class_healthy}
 
+
 def convert_and_upload_supervisely_project(
     api: sly.Api, workspace_id: int, project_name: str
 ) -> sly.ProjectInfo:
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)
-    meta = sly.ProjectMeta(obj_classes=[obj_class_phytophthora, obj_class_monilia, obj_class_healthy])
+    meta = sly.ProjectMeta(
+        obj_classes=[obj_class_phytophthora, obj_class_monilia, obj_class_healthy]
+    )
     api.project.update_meta(project.id, meta.to_json())
 
     all_images = glob.glob(dataset_path + "/*/*.jpg")

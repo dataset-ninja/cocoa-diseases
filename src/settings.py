@@ -5,8 +5,10 @@ from dataset_tools.templates import AnnotationType, CVTask, Industry, License
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "Cocoa Diseases YOLOv4"
-PROJECT_NAME_FULL: Optional[str] = "Cocoa Diseases YOLOv4: Monilia & Phytophthora"
+PROJECT_NAME: str = "Cocoa Diseases"
+PROJECT_NAME_FULL: Optional[
+    str
+] = "Cocoa Diseases (YOLOv4): Monilia & Phytophthora (Diseases in cocoa pods)"
 
 ##################################
 # * After uploading to instance ##
@@ -20,7 +22,7 @@ RELEASE_YEAR: int = 2020
 HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/serranosebas/enfermedades-cacao-yolov4"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 390238
+PREVIEW_IMAGE_ID: int = 1456875
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/cocoa-diseases"
