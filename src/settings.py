@@ -16,7 +16,7 @@ from dataset_tools.templates import (
 PROJECT_NAME: str = "Cocoa Diseases"
 PROJECT_NAME_FULL: Optional[
     str
-] = "Cocoa Diseases (YOLOv4): Monilia & Phytophthora (Diseases in cocoa pods)"
+] = "Cocoa Diseases (YOLOv4): Monilia & Phytophthora (Diseases in Cocoa Pods)"
 
 ##################################
 # * After uploading to instance ##
