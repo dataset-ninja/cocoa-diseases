@@ -10,4 +10,4 @@ If you make use of the Cocoa Diseases data, please cite the following reference:
       }
 ```
 
-[🔗 Source](https://repository.unab.edu.co/handle/20.500.12749/13367)
+[Source](https://repository.unab.edu.co/handle/20.500.12749/13367)
