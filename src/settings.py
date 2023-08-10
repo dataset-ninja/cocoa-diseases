@@ -17,6 +17,7 @@ PROJECT_NAME: str = "Cocoa Diseases"
 PROJECT_NAME_FULL: Optional[
     str
 ] = "Cocoa Diseases (YOLOv4): Monilia & Phytophthora (Diseases in Cocoa Pods)"
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -85,6 +86,7 @@ def get_settings():
 
     settings = {
         "project_name": PROJECT_NAME,
+        "hide_dataset": HIDE_DATASET,
         "license": LICENSE,
         "applications": APPLICATIONS,
         "category": CATEGORY,
