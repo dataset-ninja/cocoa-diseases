@@ -1,6 +1,6 @@
 Dataset **Cocoa Diseases** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/a/M/K1/7X136vwspUAtkmqcVuT7ZzoPn23QiG7udnECLXbhsP18d9BH1lQHdZdrCHEZ0vLIRrNqzXuZmZBq0duaRyzIcZQELlLZhmtpwINBnqhonuNx4ibLTlDwcJfeONMd.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/L/M/Rs/oe1Cy0FxZApcqMOFzxv0aNCedHD2mx7yPdPvWOLx7fN10ZTaost9BbErcQfBlKIdw7b4GvHMykL7Gj1ki9MMPCRPavaXfQpbHwfmnXe9BCidjwmWugYOt9Ytzh1l.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
