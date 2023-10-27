@@ -59,6 +59,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 PAPER: Optional[str] = "https://repository.unab.edu.co/handle/20.500.12749/13367"
 CITATION_URL: Optional[str] = "https://repository.unab.edu.co/handle/20.500.12749/13367"
 AUTHORS: Optional[List[str]] = ["Serrano Arenas Juan Sebastián", "Torres Villamizar Camilo Andrés"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["https://www.kaggle.com/serranosebas"]
 
 ORGANIZATION_NAME: Optional[
     Union[str, List[str]]
@@ -108,6 +109,7 @@ def get_settings():
     settings["paper"] = PAPER
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
